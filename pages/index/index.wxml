@@ -1,0 +1,17 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getLocation" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <button bindtap="bindEnterQuestion">输入题目</button>
+      <button>设置时间</button>
+      <text>{{question}}</text>
+      <text>{{time}}</text>
+      <!-- <text>{{speakTime}}</text> -->
+      <!-- <text>{{tempFilePath}}</text> -->
+      <button type="primary" bindtap="startRecording">开始录制</button>
+      <!-- <audio src="{{tempFilePath}}" controls></audio> -->
+      <button bindtap="bindPlay">开始播放</button>
+    </block>
+  </view>
+</view>

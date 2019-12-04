@@ -1,0 +1,5 @@
+<!--pages/questions/questions.wxml-->
+<view class="container">
+  <button bindtap="bindReturn" value="{{questions}}">保存/返回</button>
+  <textarea placeholder="输入题目，换行分隔" auto-focus></textarea>
+</view>
